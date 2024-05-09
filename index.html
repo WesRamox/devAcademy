@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Garanta seu material</title>
 
+    <link rel="shortcut icon" href="./images/image.png" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
@@ -13,14 +14,16 @@
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 </head>
 <body>
-    <section class="home">
+    <section class="home" id="home">
         <div class="bg"></div>
         <div class="box">
-            <div class="content" data-aos="fade-right">
+            <div class="content" data-aos="zoom-in-down">
                 <h1><span class="dev">Dev</span>Academy</h1>
                 <h2>O melhor material para você que sonha em ser <span class="dev">programador</span>.</h2>
                 <div class="divider">
-                    <span class="programming">&lt;/&gt;</span>
+                    <span class="programming">
+                        <i class="fa-solid fa-code"></i>
+                    </span>
                 </div>
                 <p class="p-content">
                     Você já teve o sonho de criar algo incrível, de ver suas ideias ganharem <span class="highlight">vida</span> através de linhas de
@@ -43,21 +46,68 @@
 
                     <label for="whatsapp">WhatsApp para receber Acesso<span class="important">*</span></label>
                     <input class="" type="tel" name="whatsapp" placeholder="Seu WhatsApp">
-
+                    
                     <button class="btnMaterial">Garantir material</button>
                 </form>
             </div>
         </div>
     </section>
+    <div class="about">
+        <div class="box-about">
+            <h2>CONTEÚDO DO <span class="highlight-h2">MATERIAL</span></h2>
+            <div class="divider">
+                <span class="programming">
+                    <i class="fa-solid fa-code"></i>
+                </span>
+            </div>
+            <h1 class="animated-logo"><span class="dev">Dev</span>Academy</h1>
+            <p class="p-about">Prepare-se para uma jornada emocionante e transformadora no mundo da programação. Comece sua jornada hoje mesmo!</p>
+            <ul class="material-content">
+                <li class="material-item" data-aos="zoom-in" data-aos-duration="1500">
+                    <div class="material-box">
+                        <i class="fa-solid fa-code"></i>
+                        <p>Introdução à Programação</p>
+                    </div>
+                </li>
+                <li class="material-item" data-aos="zoom-in" data-aos-duration="1500">
+                    <div class="material-box">
+                        <p>Lógica de Programação</p>
+                        <i class="fa-solid fa-diagram-project"></i>
+                    </div>
+                </li>
+                <li class="material-item" data-aos="zoom-in" data-aos-duration="1500">
+                    <div class="material-box">
+                        <i class="fa-solid fa-globe"></i>
+                        <p>Linguagens de Programação</p>
+                    </div>
+                </li>
+                <li class="material-item" data-aos="zoom-in" data-aos-duration="1500">
+                    <div class="material-box">
+                        <p>Desenvolvimento de Sistemas</p>
+                        <i class="fa-brands fa-connectdevelop"></i>
+                    </div>
+                </li>
+                <li class="material-item" data-aos="zoom-in" data-aos-duration="1500">
+                    <div class="material-box">
+                        <i class="fa-solid fa-gears"></i>
+                        <p>Ferramentas de Desenvolvimento</p>
+                    </div>
+                </li>
+            </ul>
+            <a href="#home" class="btnMaterial-link">Garantir material</a>
+        </div>
+    </div>
     <section class="bonus">
         <div class="box-bonus" data-aos="zoom-in">
             <img src="./images/bonus.webp" alt="" id="bonus-img">
-            <h1>SOMENTE PARA INSCRITOS</h1>
+            <h1>SOMENTE PARA <span class="highlight-h2">INSCRITOS</span></h1>
             <div class="divider">
-                <span class="programming">&lt;/&gt;</span>
+                <span class="programming">
+                    <i class="fa-solid fa-code"></i>
+                </span>
             </div>
             <h1><span class="dev">Dev</span>Academy</h1>
-            <p class="p-bonus">Logo após a inscrição você também recebe:</p>
+            <p class="p-bonus">Logo após a inscrição você também recebe</p>
             <div class="box-bonus-details">
                 <div class="bonus-f">
                     <i class="fa-solid fa-users"></i>
@@ -71,12 +121,32 @@
                 </div>
             </div>
             <p class="final-bonus"><span class="highlight">Cadastre-se agora</span> e tenha acesso a tudo isso e muito mais</p>
-            <button class="btnMaterial">Garantir material</button>
+            <a href="#home" class="btnMaterial-link">Cadastrar agora</a>
         </div>
     </section>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
-      AOS.init();
+      AOS.init({
+        // Global settings:
+        disable: false, // accepts following values: 'phone', 'tablet', 'mobile', boolean, expression or function
+        startEvent: 'DOMContentLoaded', // name of the event dispatched on the document, that AOS should initialize on
+        initClassName: 'aos-init', // class applied after initialization
+        animatedClassName: 'aos-animate', // class applied on animation
+        useClassNames: false, // if true, will add content of `data-aos` as classes on scroll
+        disableMutationObserver: false, // disables automatic mutations' detections (advanced)
+        debounceDelay: 50, // the delay on debounce used while resizing window (advanced)
+        throttleDelay: 99, // the delay on throttle used while scrolling the page (advanced)
+        
+
+        // Settings that can be overridden on per-element basis, by `data-aos-*` attributes:
+        offset: 120, // offset (in px) from the original trigger point
+        delay: 0, // values from 0 to 3000, with step 50ms
+        duration:  900, // values from 0 to 3000, with step 50ms
+        easing: 'ease', // default easing for AOS animations
+        once: false, // whether animation should happen only once - while scrolling down
+        mirror: false, // whether elements should animate out while scrolling past them
+        anchorPlacement: 'top-bottom', // defines which position of the element regarding to window should trigger the animation
+        });
     </script>
     <script src="https://kit.fontawesome.com/87ae717b84.js" crossorigin="anonymous"></script>
 </body>

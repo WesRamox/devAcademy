@@ -76,6 +76,11 @@
     .divider {
         margin-top: 0px;
     }
+
+    .material-content {
+        gap: 50px;
+        max-width: 824px;
+    }
 }
 
 @keyframes light {
